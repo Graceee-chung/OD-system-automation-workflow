@@ -27,10 +27,11 @@ Packages: selenium, pyautogui, pygetwindow, pyperclip, python-dotenv (if used), 
 - **pdf_handler_v2.py** – More robust GUI automation using template-matching (image recognition), Chrome window focusing, safer dialogs, and improved error screenshots.  
 
 ### Output Layout
+'''
 archive_root/
 └─ {doc_no} {sender} {ROC_date} {issue_no}/
    ├─ {same_string}.pdf
    ├─ attachments/
    │   └─ (all downloaded files)
    └─ metadata.log
-
+'''
