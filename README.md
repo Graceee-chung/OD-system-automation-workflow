@@ -16,15 +16,15 @@ Windows (for GUI print dialogs)
 Packages: selenium, pyautogui, pygetwindow, pyperclip, python-dotenv (if used), etc.
 
 ### File-by-file summary
-• __main__.py – Orchestrates the whole workflow: initializes logging/driver, iterates documents, calls handlers to save PDFs and attachments, and controls retries.
-• config.py – Centralized settings (credentials, URLs, timeouts, paths, feature toggles) to adapt the automation without touching code.
-• driver_util.py – Builds and configures the Selenium Chrome WebDriver (options, user-agent, waits) and provides helper functions for window/tab management.
-• logger_setup.py – Sets up structured logging (console/file formatters, levels, emoji hints) used across all modules.
-• document_util.py – Parses HTML to extract metadata (doc number, sender, dates), normalizes strings, and generates canonical file/folder names.
-• document_handler.py – High-level document routines: open a row, switch tabs, invoke print/save, download attachments, and write results into the archive.
-• pdf_handler.py – Thin façade choosing the appropriate PDF-saving strategy and exposing trigger_print / save_pdf_gui wrappers.
-• pdf_handler_v1.py – Baseline GUI automation for “Print → Save as PDF” using fixed coordinates and image checks; includes a retry flow that reopens failed rows.
-• pdf_handler_v2.py – More robust GUI automation using template-matching (image recognition), Chrome window focusing, safer dialogs, and improved error screenshots.
+- **main.py** – Orchestrates the whole workflow: initializes logging/driver, iterates documents, calls handlers to save PDFs and attachments, and controls retries.  
+- **config.py** – Centralized settings (credentials, URLs, timeouts, paths, feature toggles) to adapt the automation without touching code.  
+- **driver_util.py** – Builds and configures the Selenium Chrome WebDriver (options, user-agent, waits) and provides helper functions for window/tab management.  
+- **logger_setup.py** – Sets up structured logging (console/file formatters, levels, emoji hints) used across all modules.  
+- **document_util.py** – Parses HTML to extract metadata (doc number, sender, dates), normalizes strings, and generates canonical file/folder names.  
+- **document_handler.py** – High-level document routines: open a row, switch tabs, invoke print/save, download attachments, and write results into the archive.  
+- **pdf_handler.py** – Thin façade choosing the appropriate PDF-saving strategy and exposing `trigger_print` / `save_pdf_gui` wrappers.  
+- **pdf_handler_v1.py** – Baseline GUI automation for “Print → Save as PDF” using fixed coordinates and image checks; includes a retry flow that reopens failed rows.  
+- **pdf_handler_v2.py** – More robust GUI automation using template-matching (image recognition), Chrome window focusing, safer dialogs, and improved error screenshots.  
 
 ### Output Layout
 archive_root/
