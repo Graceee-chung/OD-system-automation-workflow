@@ -2,7 +2,7 @@
 This project automates downloading, naming, and archiving official documents from the Vital OD system using Selenium + GUI automation (PyAutoGUI). The pipeline logs in, iterates pending items, opens each document, saves a PDF with a standardized filename, downloads attachments, and organizes everything into per-document folders with robust logging and retries.
 
 ### Features
-1. Headless-optional Selenium login & navigation to “待辦理”.
+1. Headless-optional Selenium login & navigation to “待辦理(Wait for processing)".
 2. Auto open each document tab and trigger Print → Save as PDF.
 3. GUI automation fallback for Windows print dialogs.
 4. Deterministic file/folder names from parsed metadata (doc no., sender, date).
